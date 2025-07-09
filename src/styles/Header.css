@@ -61,3 +61,52 @@
   transform: scaleX(1);
   transform-origin: left;
 }
+
+/* Desktop nav hidden on mobile */
+.desktop-nav {
+  @apply hidden md:block;
+}
+
+/* Hamburger button */
+.hamburger {
+  @apply block md:hidden text-white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile dropdown under navbar */
+.mobile-dropdown {
+  @apply absolute right-4 top-16 bg-[#2c3e50] text-white rounded-lg shadow-md p-4 md:hidden;
+  z-index: 100;
+}
+
+.mobile-nav-list {
+  @apply flex flex-col space-y-4;
+}
+
+
+.mobile-nav-list a {
+  @apply text-white font-semibold transition duration-300;
+}
+
+.mobile-nav-list a:hover {
+  color: #e74c3c;
+}
+
+@keyframes dropdownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-dropdown {
+  @apply absolute right-4 top-16 bg-[#2c3e50] text-white rounded-lg shadow-md p-4 md:hidden;
+  animation: dropdownFade 0.3s ease-out;
+  z-index: 100;
+}
