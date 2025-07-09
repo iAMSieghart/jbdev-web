@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero {
+ .hero {
   @apply min-h-screen flex items-center justify-center text-white text-center px-4;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: radial-gradient(ellipse 40% 500% at 30% center, #f5f6fa -100%, #34495e 100%);
   position: relative;
 }
 

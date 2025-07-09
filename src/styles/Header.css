@@ -3,37 +3,45 @@
 @tailwind utilities;
 
 .logo-img {
-    height: 40px;
-    width: auto;
+  height: 40px;
+  width: auto;
 }
 
 .header {
-    @apply bg-light-gray shadow-md p-4 fixed w-full z-50;
-    @apply sticky top-0 z-50 backdrop-blur bg-light-gray/30 border-b border-midnight-blue/20;
+  @apply fixed top-0 w-full z-50 transition-all duration-300;
+  background-color: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+.header.scrolled {
+  @apply backdrop-blur bg-midnight-blue/50 border-b border-gray-300 shadow-md;
+}
+
+.header.scrolled .nav-link a {
+  color: bg-midnight-blue;
 }
 
 .nav-container {
-    @apply container mx-auto flex justify-between items-center;
-}
-
-.logo {
-    @apply text-xl font-bold;
+  @apply container mx-auto flex justify-between items-center p-4;
 }
 
 .nav-list {
-    @apply flex space-x-10;
+  @apply flex space-x-10;
 }
 
 .nav-link a {
   position: relative;
   padding: 8px 12px;
-  color: #333;
+  color: #ecf0f1;
+  font-weight: bold;
+  letter-spacing: 0.5px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-link a:hover {
-  color: #e74c3c; /* Change this to match your theme */
+  color: #e74c3c;
 }
 
 .nav-link a::after {

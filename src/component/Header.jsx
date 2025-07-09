@@ -1,10 +1,21 @@
+import { useEffect, useState } from 'react';
 import '../styles/Header.css';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Adjust threshold as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        {/* <h1 className="logo">JB</h1> */}
         <img src="/assets/jb-logo.ico" alt="JB Logo" className="logo-img" />
         <nav>
           <ul className="nav-list">
@@ -17,6 +28,6 @@ const Header = () => {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

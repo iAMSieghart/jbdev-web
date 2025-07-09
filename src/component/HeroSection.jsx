@@ -46,8 +46,7 @@ const HeroTitle = ({ text }) => {
 
 const HeroSection = () => {
   return (
-    <section className="hero" id="hero" 
-      style={{ backgroundImage: 'url(/assets/minimalist.jpg)' }}>
+    <section className="hero" id="hero">
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <img
