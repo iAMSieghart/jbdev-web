@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  @apply bg-gray-900 text-white py-6;
+}
+
+.footer-container {
+  @apply container mx-auto px-4 flex flex-col md:flex-row items-center justify-between;
+}
+
+.footer-text {
+  @apply text-sm;
+}
+
+.footer-links {
+  @apply flex space-x-4 mt-4 md:mt-0;
+}
+
+.footer-links a {
+  @apply text-gray-300 hover:text-white transition;
+}

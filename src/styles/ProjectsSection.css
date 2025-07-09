@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.projects {
+  @apply py-20 bg-gray-50;
+}
+
+.projects-container {
+  @apply container mx-auto px-4;
+}
+
+.project-list {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.project-card {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+.project-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+.project-description {
+  @apply text-gray-600;
+}

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.header {
+    @apply bg-light-gray shadow-md p-4 fixed w-full z-50;
+    @apply sticky top-0 z-50 backdrop-blur bg-light-gray/30 border-b border-midnight-blue/20;
+}
+
+.nav-container {
+    @apply container mx-auto flex justify-between items-center;
+}
+
+.logo {
+    @apply text-xl font-bold;
+}
+
+.nav-list {
+    @apply flex space-x-10;
+}
+
+.nav-link a {
+  position: relative;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+  color: #e74c3c; /* Change this to match your theme */
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #e74c3c;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    
+.custom-wrapper {
+    @apply min-h-screen bg-gray-100 flex items-center justify-center;
+}
+
+.card {
+    @apply p-6 bg-white rounded-lg shadow-lg text-center;
+}
+
+.card-title {
+    @apply text-3xl font-bold text-blue-600 mb-4;
+}
+
+.card-text {
+    @apply text-gray-700;
+}

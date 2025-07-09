@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contact {
+  @apply py-20 bg-white;
+}
+
+.contact-container {
+  @apply container mx-auto px-4 text-center;
+}
+
+.contact-form {
+  @apply max-w-xl mx-auto mt-6 space-y-4;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-2 h-32 border border-gray-300 rounded-md;
+}
+
+.form-button {
+  @apply bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition;
+}
