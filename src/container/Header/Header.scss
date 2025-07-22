@@ -4,11 +4,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+  min-height: 100vh;
 
-  // disable the default padding styles
   .app__wrapper {
     padding: 0;
-
     .copyright {
       display: none;
     }
@@ -16,22 +15,92 @@
 }
 
 .app__header {
-  flex: 1;
   width: 100%;
-  height: 100%;
-  flex-direction: row;
+  min-height: 100vh;
+  padding: 6rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
-  padding: 6rem 2rem 0rem;
+  .app__header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    flex: 1;
 
-  @media screen and (min-width: 2000px) {
-    padding-top: 8rem;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
-  @media screen and (max-width: 1200px) {
-    flex-direction: column;
+  .app__header-info {
+    flex: 1;
+    color: white;
+
+    .badge {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .app__header-title {
+      font-size: 3rem;
+      margin: 1rem 0;
+      font-weight: 900;
+      text-shadow: 0px 0px 5px #000 solid;
+    }
+
+    .app__header-desc {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 400px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .app__header-button {
+      padding: 0.75rem 2rem;
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
   }
 
-  @media screen and (max-width: 450px) {
-    padding: 6rem 1rem 2rem;
+  .app__header-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 110%;
+    box-shadow: -3px -3px 10px rgba(246, 229, 141, 0.5), 3px 3px 10px rgba(0, 0, 0, 0.5)  ;
+    border-radius: 50%;
+    animation: bounce 4s infinite;
+
+    img {
+      object-fit: cover;
+      object-position: 0 90%;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-width: 400px;
+      border-radius: 50%;
+      // border: 5px dashed var(--secondary-color); // thickness
+    }
   }
 }

@@ -38,6 +38,11 @@ import spotify from '../assets/spotify.png';
 import JB_Logo from '../assets/jb_logo-01.png';
 import No_image from '../assets/No_image.png';
 import minimalist_bg from '../assets/minimalist.jpg';
+import JB from '../assets/jb.jpeg';
+import bg1 from '../assets/90557.jpg';
+import meteors from '../assets/meteors.jpg';
+import jbpng from '../assets/jb.png';
+import planet from '../assets/planet-01.png';
 
 export default {
     email,
@@ -75,5 +80,10 @@ export default {
     spotify,
     JB_Logo,
     No_image,
-    minimalist_bg
+    minimalist_bg,
+    JB,
+    bg1,
+    meteors,
+    jbpng,
+    planet
 };
