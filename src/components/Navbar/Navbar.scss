@@ -6,10 +6,10 @@
     align-items: center;
 
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(44, 62, 80, 0.25);
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(4px);
+    // border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
 }
@@ -22,10 +22,23 @@
     img {
         width: 50px;
         height: 50px;
+        animation: bounce 3s infinite;
 
         @media screen and (min-width: 2000px) {
             width: 100px;
             height: 100px;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(3px);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+            100% {
+                transform: translateY(3px);
+            }
         }
     }
 }
@@ -33,7 +46,7 @@
 .app__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 
     list-style: none;
@@ -44,24 +57,24 @@
 
         flex-direction: column;
 
-        div {
-            width: 5px;
-            height: 5px;
-            background: transparent;
-            border-radius: 50%;
+        // div {
+        //     width: 100%;
+        //     height: 5px;
+        //     background: transparent;
+        //     border-radius: 50%;
 
-            margin-bottom: 5px;
-        }
+        //     margin-bottom: 5px;
+        // }
 
         a {
-            color: var(--gray-color);
+            color: var(--lightGray-color);
             text-decoration: none;
             flex-direction: column;
 
             text-transform: uppercase;
-            font-weight:  500;
+            font-weight:  400;
 
-            transition:  all 0.3s ease-in-out;
+            transition:  all 0.2s ease-in-out;
 
             &:hover {
                 color: var(--secondary-color);
@@ -90,7 +103,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: var(--secondary-color);
+        cursor: pointer;
+    }
 
     svg {
         width: 70%;
@@ -115,10 +133,12 @@
         align-items: flex-end;
         flex-direction: column;
 
-        background: url('../../assets/bgWhite.png');
+        background: url('../../assets/90557.jpg');
         background-color: var(--white-color);
         background-size: cover;
         background-repeat: repeat;
+        background-position: bottom;
+        // background: linear-gradient(to top, #0d0221, #20013f, #32025f, #4b0480);
 
         box-shadow:  0 0 20px rgba(168, 168, 168, 0.15);
         
@@ -138,18 +158,21 @@
 
             display: flex;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
 
             li {
                 margin: 1rem;
+                width: auto;
+                text-align: center;
 
                 a {
-                    color: var(--gray-color);
+                    color: var(--lightGray-color);
                     text-decoration: none;
                     text-transform: uppercase;
                     font-size: 1rem;
                     font-weight: 500;
+                    padding: 10px;
 
                     transition: all 0.3s ease-in-out;
 
