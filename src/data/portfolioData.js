@@ -29,10 +29,8 @@ become a full-stack developer.`,
 export const SKILLS = {
   core: [
     { name: "C# / .NET Framework",        level: 95 },
-    { name: "ASP.NET MVC / Web API",       level: 90 },
     { name: "Entity Framework Core",       level: 88 },
     { name: "MySQL",                       level: 85 },
-    { name: "REST API Design",             level: 87 },
     { name: "LINQ",                        level: 83 },
   ],
   learning: [
