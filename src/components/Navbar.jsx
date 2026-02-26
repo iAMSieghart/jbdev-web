@@ -1,16 +1,4 @@
-// ============================================================
-// Navbar.jsx
-//
-// Single Responsibility: ONLY handles navigation display.
-// It receives data via props — it doesn't know or care
-// where that data comes from.
-//
-// Props:
-//   items        — array of nav label strings
-//   activeSection — which one is currently selected
-//   onNavigate   — callback when user clicks a nav item
-// ============================================================
-
+import { PROFILE } from "../data/portfolioData";
 import { tokens } from "../styles";
 
 export function Navbar({ items, activeSection, onNavigate }) {
@@ -18,7 +6,7 @@ export function Navbar({ items, activeSection, onNavigate }) {
     <header style={styles.header}>
       <div style={styles.logo}>
         <span style={{ color: tokens.colors.textDim }}>// </span>
-        dev.portfolio
+        {PROFILE?.name ?? "dev.portfolio"}
         <span style={styles.cursor}>_</span>
       </div>
 

@@ -1,10 +1,4 @@
-// ============================================================
-// AboutSection.jsx
-//
-// Displays profile info. Receives `profile` as a prop.
-// No hardcoded strings here — all data comes from portfolioData.js
-// ============================================================
-
+import { PROFILE } from "../data/portfolioData";
 import { tokens, sharedStyles } from "../styles";
 
 export function AboutSection({ profile }) {
@@ -13,8 +7,8 @@ export function AboutSection({ profile }) {
       <p style={sharedStyles.sectionLabel}>// hello world</p>
 
       <h1 style={styles.heading}>
-        Senior<br />
-        <span style={{ color: tokens.colors.accent }}>Developer</span>
+        {PROFILE.name}<br />
+        <span style={{ color: tokens.colors.accent }}>{PROFILE.title}</span>
       </h1>
 
       <p style={styles.tagline}>{profile.tagline}</p>

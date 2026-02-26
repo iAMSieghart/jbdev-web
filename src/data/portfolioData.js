@@ -5,8 +5,8 @@
 // ============================================================
 
 export const PROFILE = {
-  name: "Your Name",
-  title: "Senior Developer",
+  name: "JB",
+  title: ".NET Framework Developer",
   tagline: "C# · .NET Framework · MySQL · (learning React + Node)",
   bio: `I'm a Senior Developer specializing in C# and .NET Framework, 
 with solid experience building backend systems and database-driven 
@@ -44,19 +44,28 @@ export const SKILLS = {
 
 export const PROJECTS = [
   {
-    title: "Inventory Management System",
+    title: "BNCSystem v2.0 (Billing and Collection)",
     description:
-      "Full-stack desktop app built with C# .NET and MySQL. Features real-time stock tracking, reporting, and role-based access control.",
-    tags: ["C#", ".NET", "MySQL", "EF Core"],
+      "A billing and collection system that generates Delivery Receipts, Invoices, RCSM, Cost Distribution, and Sales Reports for streamlined financial operations.",
+    tags: ["C#", ".NET Framework 4.6", "MySQL", "EF Core"],
     status: "completed",
     github: "#",
     demo: null,
   },
   {
-    title: "Employee Leave Portal",
+    title: "Production Management System (PMS)",
     description:
-      "Web-based HR portal using ASP.NET MVC with MySQL backend. Handles leave requests, approvals, and email notifications.",
-    tags: ["ASP.NET MVC", "MySQL", "C#", "Bootstrap"],
+      "Manages production jobs with real-time status monitoring, enabling teams to track and oversee job progress throughout the production workflow.",
+    tags: ["C#", ".NET Framework 4.6", "MySQL", "EF Core"],
+    status: "completed",
+    github: "#",
+    demo: null,
+  },
+  {
+    title: "Check Order Entry System (COES)",
+    description:
+      "An order entry system for processing client cheque orders, built on the latest .NET 8.0 with a modern MySQL Entity Framework Core backend.",
+    tags: ["C#", ".NET 8.0", "MySQL", "EF Core"],
     status: "completed",
     github: "#",
     demo: null,
