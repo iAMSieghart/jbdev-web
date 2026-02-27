@@ -1,12 +1,12 @@
 import { PROFILE } from "../data/portfolioData";
 import { tokens } from "../styles";
 
-export function Navbar({ items, activeSection, onNavigate }) {
+export function Navbar({ items, activeSection, onNavigate, tokens, isDark, onToggleTheme }) {
   return (
     <header style={styles.header}>
       <div style={styles.logo}>
         <span style={{ color: tokens.colors.textDim }}>// </span>
-        {PROFILE?.name ?? "dev.portfolio"}
+        {PROFILE?.firstname ?? "dev.portfolio"} {PROFILE?.lastname ?? ""}
         <span style={styles.cursor}>_</span>
       </div>
 
@@ -19,6 +19,23 @@ export function Navbar({ items, activeSection, onNavigate }) {
             onClick={() => onNavigate(item)}
           />
         ))}
+
+        <button
+          onClick={onToggleTheme}
+          style={{
+            background:   "transparent",
+            border:       `1px solid ${tokens.colors.border}`,
+            color:        tokens.colors.text,
+            cursor:       "pointer",
+            padding:      "8px 12px",
+            fontSize:     "14px",
+            borderRadius: "2px",
+            marginLeft:   "8px",
+            transition:   "all 0.2s",
+          }}
+        >
+          {isDark ? "☀️" : "🌙"}
+        </button>
       </nav>
     </header>
   );

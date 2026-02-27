@@ -4,11 +4,20 @@ import { tokens, sharedStyles } from "../styles";
 export function AboutSection({ profile }) {
   return (
     <div>
+
+      <div style={styles.photoWrapper}>
+          <img 
+            src="/profile.jpg"
+            alt="JB Gabriel"
+            style={styles.photo}
+          />
+      </div>
+
       <p style={sharedStyles.sectionLabel}>// hello world</p>
 
       <h1 style={styles.heading}>
-        {PROFILE.name}<br />
-        <span style={{ color: tokens.colors.accent }}>{PROFILE.title}</span>
+        {PROFILE.firstname}<br />
+        <span style={{ color: tokens.colors.accent, fontSize: "clamp(25px, 3vw, 32px)",}}>{PROFILE.title}</span>
       </h1>
 
       <p style={styles.tagline}>{profile.tagline}</p>
@@ -77,4 +86,15 @@ const styles = {
     color:      tokens.colors.textMuted,
     fontSize:   "14px",
   },
+  photoWrapper: {
+    marginBottom: "32px",
+  },
+  photo: {
+    width: "120px",
+    height: "120px",
+    borderRadius: "50%",
+    border: `2px solid ${tokens.colors.accent}`,
+    objectFit: "cover",
+    display: "block",
+  }
 };

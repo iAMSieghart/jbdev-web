@@ -1,12 +1,4 @@
-// ============================================================
-// styles.js — Design Tokens
-//
-// All colors, spacing, fonts in ONE place.
-// Change the accent color here → updates everywhere.
-// Same concept as CSS variables or a Design System.
-// ============================================================
-
-export const tokens = {
+export const darkTokens = {
   colors: {
     bg:          "#0a0a0f",
     surface:     "rgba(255,255,255,0.03)",
@@ -26,23 +18,45 @@ export const tokens = {
   },
 };
 
-// Reusable inline style objects — like CSS classes but in JS
+export const lightTokens = {
+  colors: {
+    bg:          "#f5f5f0",
+    surface:     "rgba(0,0,0,0.03)",
+    border:      "rgba(0,0,0,0.08)",
+    borderHover: "rgba(0,180,100,0.4)",
+    accent:      "#00a86b",
+    accentBlue:  "#0077cc",
+    accentWarn:  "#cc8800",
+    text:        "#1a1a1a",
+    textMuted:   "#555",
+    textDim:     "#888",
+    textDimmer:  "#bbb",
+  },
+  fonts: {
+    mono:    "'JetBrains Mono', monospace",
+    display: "'Syne', sans-serif",
+  },
+};
+
+// Default export still works for files that haven't been updated yet
+export const tokens = darkTokens;
+
 export const sharedStyles = {
   card: {
-    background:   tokens.colors.surface,
-    border:       `1px solid ${tokens.colors.border}`,
+    background:   "rgba(255,255,255,0.03)",
+    border:       "1px solid rgba(255,255,255,0.08)",
     padding:      "24px",
     borderRadius: "4px",
     transition:   "border-color 0.2s",
   },
   sectionLabel: {
-    fontFamily:    tokens.fonts.mono,
-    color:         tokens.colors.textDim,
-    fontSize:      "12px",
-    marginBottom:  "8px",
+    fontFamily:   "'JetBrains Mono', monospace",
+    color:        "#555",
+    fontSize:     "12px",
+    marginBottom: "8px",
   },
   sectionTitle: {
-    fontFamily: tokens.fonts.display,
+    fontFamily: "'Syne', sans-serif",
     fontSize:   "36px",
     fontWeight: 800,
     marginTop:  "8px",

@@ -1,16 +1,3 @@
-// ============================================================
-// ContactSection.jsx
-//
-// Uses a controlled form — a core React pattern.
-//
-// CONTROLLED vs UNCONTROLLED forms:
-//   Controlled   = React state owns the input value (senior way ✓)
-//   Uncontrolled = DOM owns the value (avoid this)
-//
-// In C# terms: think of `formData` state as a DTO (Data Transfer Object)
-// that you build up before sending to an API.
-// ============================================================
-
 import { useState } from "react";
 import { tokens, sharedStyles } from "../styles";
 

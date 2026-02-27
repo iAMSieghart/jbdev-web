@@ -1,11 +1,6 @@
-// ============================================================
-// portfolioData.js
-// All static data lives here — never hardcode inside components.
-// If data changes, you only update ONE file.
-// ============================================================
-
 export const PROFILE = {
-  name: "JB",
+  firstname: "JB Shame",
+  lastname: "Gabriel",
   title: ".NET Framework Developer",
   tagline: "C# · .NET Framework · MySQL · (learning React + Node)",
   bio: `I'm a Senior Developer specializing in C# and .NET Framework, 
@@ -20,9 +15,9 @@ become a full-stack developer.`,
     { label: "Learning",         value: "React + Node.js"  },
   ],
   links: [
-    { label: "GitHub",   href: "https://github.com/yourhandle"         },
-    { label: "LinkedIn", href: "https://linkedin.com/in/yourprofile"   },
-    { label: "Email",    href: "mailto:your@email.com"                 },
+    { label: "GitHub",   href: "https://github.com/iamsieghart"         },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jb-shame-gabriel-ab8a462b2/"   },
+    { label: "Email",    href: "mailto:jbshame@gmail.com"                 },
   ],
 };
 
@@ -44,6 +39,15 @@ export const SKILLS = {
 
 export const PROJECTS = [
   {
+    title: "Check Order Entry System (COES)",
+    description:
+      "An order entry system for processing client cheque orders, built on the latest .NET 8.0 with a modern MySQL Entity Framework Core backend.",
+    tags: ["C#", ".NET 8.0", "MySQL", "EF Core"],
+    status: "completed",
+    github: "#",
+    demo: null,
+  },
+  {
     title: "BNCSystem v2.0 (Billing and Collection)",
     description:
       "A billing and collection system that generates Delivery Receipts, Invoices, RCSM, Cost Distribution, and Sales Reports for streamlined financial operations.",
@@ -57,15 +61,6 @@ export const PROJECTS = [
     description:
       "Manages production jobs with real-time status monitoring, enabling teams to track and oversee job progress throughout the production workflow.",
     tags: ["C#", ".NET Framework 4.6", "MySQL", "EF Core"],
-    status: "completed",
-    github: "#",
-    demo: null,
-  },
-  {
-    title: "Check Order Entry System (COES)",
-    description:
-      "An order entry system for processing client cheque orders, built on the latest .NET 8.0 with a modern MySQL Entity Framework Core backend.",
-    tags: ["C#", ".NET 8.0", "MySQL", "EF Core"],
     status: "completed",
     github: "#",
     demo: null,
